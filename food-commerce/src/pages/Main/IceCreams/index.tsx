@@ -1,3 +1,9 @@
+import { Head } from "../../../components/Head";
+import { SnackTitle } from "../../../components/Title";
+
 export default function IceCreams () {
-   return <h1>IceCreams</h1> 
+   return <>
+   <Head title="Cravo & Canela"/>
+   <SnackTitle>Doces</SnackTitle>
+</>
 }

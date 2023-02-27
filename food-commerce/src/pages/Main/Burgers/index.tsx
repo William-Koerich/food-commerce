@@ -1,3 +1,10 @@
+import { Head } from "../../../components/Head"
+import { SnackTitle } from "../../../components/Title"
+
 export default function Burgers () {
-   return <h1>Burgers</h1> 
+   return <>
+      <Head title="El Toro Hamburgueria"/>
+      <SnackTitle>Hambúrgueres</SnackTitle>
+   </>
+   
 }
