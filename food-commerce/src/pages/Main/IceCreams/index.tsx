@@ -1,21 +1,11 @@
-import { useEffect, useState } from "react";
 import { Head } from "../../../components/Head";
 import { Snacks } from "../../../components/Snacks";
 import { SnackTitle } from "../../../components/Title";
-import { SnackData } from "../../../interfaces/SnackData";
-import { getIceCreams } from "../../../services/api";
+import { useSnack } from "../../../hooks/useSnack";
 
 export default function IceCreams () {
 
-   const [iceCreams, setIceCreams] = useState<SnackData[]>([])
-
-   useEffect((() => {
-      (async () => {
-         const iceCreamsRequest = await getIceCreams()
-
-         setIceCreams(iceCreamsRequest.data)
-      })()
-   }),[])
+   const { iceCreams } = useSnack()
    
    return <>
    <Head title="Cravo & Canela"/>
