@@ -2,11 +2,12 @@ import { useState, useEffect } from "react"
 import { Head } from "../../../components/Head"
 import { Snacks } from "../../../components/Snacks"
 import { SnackTitle } from "../../../components/Title"
+import { SnackData } from "../../../interfaces/SnackData"
 import { getBurgers } from "../../../services/api"
 
 export default function Burgers () {
 
-   const [burgers, setBurgers] = useState([])
+   const [burgers, setBurgers] = useState<SnackData[]>([])
 
    useEffect((() => {
       (async () => {
