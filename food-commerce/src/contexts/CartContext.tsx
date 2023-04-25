@@ -2,6 +2,7 @@ import { createContext, ReactNode, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify'
 import { snackEmoji } from '../helpers/snackEmoji';
+import { CustomerData } from '../interfaces/customerData';
 
 import { SnackData } from '../interfaces/SnackData';
 
@@ -17,7 +18,7 @@ interface CartContextProps {
     snackCartIncrement: (snack: Snack) => void
     snackCartDecrement: (snack: Snack) => void
     confirmOrder: () => void
-    payOrder: () => void
+    payOrder: (customer: CustomerData) => void
 }
 
 interface CartProviderProps {
@@ -98,7 +99,7 @@ export function CartProvider({children}: CartProviderProps){
         navigate('/payment')
     }
 
-    function payOrder () {
+    function payOrder (customer: CustomerData) {
         //
     }
 
